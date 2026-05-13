@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Libreria</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/asset/css/generi.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    </head>
+
+<body>
+
+    <div class="riquadro">
+        <h1 class="titolo">Generi</h1>
+        <button class="btnLogout" id="logout">
+            <ion-icon name="exit-outline"></ion-icon>
+            <span class="nickname"></span>
+        </button>
+
+        <div class="btnCerca" id="cerca">
+            <ion-icon name="search-outline"></ion-icon>
+            <div class="input-box">
+                <input type="text" placeholder="Cerca titolo o autore... ">
+            </div>
+        </div>
+
+        <button class="btnGenere" id="avventura">Avventura</button>
+        <button class="btnGenere" id="fantascienza">Fantascienza</button>
+        <button class="btnGenere" id="fantasy">Fantasy</button>
+        <button class="btnGenere" id="giallo">Giallo</button>
+        <button class="btnGenere" id="horror">Horror</button>
+        <button class="btnGenere" id="rosa">Romance</button>
+        <button class="btnGenere" id="altro">Altro</button>
+
+        <h2 class="sottotitolo">My Personal Library</h2>
+
+        <audio id="audio" src="/asset/audio/audio.mp3" autoplay loop></audio>
+        <button class="btnAudio" id="btnAudio">
+            <ion-icon id="audioIcon" name="volume-high-outline"></ion-icon>
+        </button>
+
+    </div>
+</body>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="/asset/js/generi.js"></script>
+
+</html>
