@@ -32,6 +32,14 @@ body
     gap: clamp(20px, 3vh, 40px);
 }
 
+@media (max-width: 90em) 
+{
+    .riquadro
+    {
+        width: 70%;
+    }
+}
+
 .titolo,
 .sottotitolo {
     text-align: center;
@@ -46,7 +54,20 @@ body
 
 .sottotitolo {
     font-size: 3em;
-    margin-top: 100px;
+    margin-top: 20%;
+}
+
+@media (max-width: 90em)
+{
+    .titolo 
+    {
+        font-size: 3em;
+    }
+
+    .sottotitolo 
+    {
+        font-size: 2.4em;
+    }
 }
 
 /* LOGOUT */
@@ -95,17 +116,26 @@ body
     max-width: 120px;
 }
 
-/*Cambio stile in base alle dimensioni dello schermo*/
+
 @media (max-width: 90em) {
 
     .btnLogout {
-        width: 64px;
+        width: 50px;
+        height: 50px;
+        align-items: center;
+        justify-content: center;
     }
 
     .btnLogout:hover {
-        width: 64px;
+        width: 50px;
+        height: 50px;
         box-shadow: 0 0 10px antiquewhite;
     }
+
+    .btnLogout ion-icon {
+    font-size: 2em;
+    min-width: 2em; /* Evita che l'icona si restringa */
+}
 
     .btnLogout:hover .nickname {
         opacity: 0;
@@ -115,7 +145,7 @@ body
 /* AUDIO */
 .btnAudio {
     position: absolute;
-    bottom: 70px;
+        bottom: 5%;;
     right: 3%;
 
     font-size: clamp(24px, 3vw, 40px);
@@ -137,6 +167,7 @@ body
     transform: scale(0.8);
 }
 
+/*PAGINA PRECEDENTE*/
 .btnIndietro
 {
     position: fixed;
@@ -148,8 +179,8 @@ body
     border-radius: 6px;
     cursor: pointer;
 
-    width: 55px;
-    height: 55px;
+    width: 64px;
+    height: 60px;
 
     display: flex;
     align-items: center;
@@ -170,4 +201,22 @@ body
     background-color: antiquewhite;
 }
 
- 
+@media (max-width: 90em) {
+
+    .btnIndietro {
+        width: 50px;
+        height: 50px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btnIndietro:hover {
+        width: 50px;
+        height: 50px;
+    }
+
+    .btnIndietro ion-icon {
+    font-size: 0.8em;
+    min-width: 0.8em; /* Evita che l'icona si restringa */
+}
+}
