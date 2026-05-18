@@ -33,6 +33,14 @@ body
     gap: clamp(20px, 3vh, 40px);
 }
 
+@media (max-width: 90em) 
+{
+    .riquadro
+    {
+        width: 70%;
+    }
+}
+
 .titolo,
 .sottotitolo {
     text-align: center;
@@ -47,7 +55,20 @@ body
 
 .sottotitolo {
     font-size: 3em;
-    margin-top: 100px;
+    margin-top: 20%;
+}
+
+@media (max-width: 90em)
+{
+    .titolo 
+    {
+        font-size: 3em;
+    }
+
+    .sottotitolo 
+    {
+        font-size: 2.4em;
+    }
 }
 
 /* LOGOUT */
@@ -100,13 +121,22 @@ body
 @media (max-width: 90em) {
 
     .btnLogout {
-        width: 64px;
+        width: 50px;
+        height: 50px;
+        align-items: center;
+        justify-content: center;
     }
 
     .btnLogout:hover {
-        width: 64px;
+        width: 50px;
+        height: 50px;
         box-shadow: 0 0 10px white;
     }
+
+    .btnLogout ion-icon {
+    font-size: 2em;
+    min-width: 2em; /* Evita che l'icona si restringa */
+}
 
     .btnLogout:hover .nickname {
         opacity: 0;
@@ -116,7 +146,7 @@ body
 
 .btnAudio {
     position: absolute;
-    bottom: 70px;
+        bottom: 5%;;
     right: 3%;
 
     font-size: clamp(24px, 3vw, 40px);
@@ -138,6 +168,7 @@ body
     transform: scale(0.8);
 }
 
+/*PAGINA PRECEDENTE*/
 .btnIndietro
 {
     position: fixed;
@@ -150,8 +181,8 @@ body
     cursor: pointer;
 
     width: 200px;
-    width: 55px;
-    height: 55px;
+    width: 64px;
+    height: 60px;
 
     display: flex;
     align-items: center;
@@ -172,99 +203,22 @@ body
     background-color: white;
 }
 
- 
+@media (max-width: 90em) {
 
-/*CARD*/
-.libro
-{
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    .btnIndietro {
+        width: 50px;
+        height: 50px;
+        align-items: center;
+        justify-content: center;
+    }
 
-    width: 180px;
-    height: 260px;
+    .btnIndietro:hover {
+        width: 50px;
+        height: 50px;
+    }
 
-    border: 2px solid white;
-    border-radius: 12px;
-
-    background: rgba(72, 128, 138, 0.349);
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    transform: translate(-50%, -50%) translateZ(0);
-    transition: transform 0.5s ease, opacity 0.1s ease;
-
-    backdrop-filter: blur(10px);
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-
-    text-align: center;
-    padding: 10px;
-    box-sizing: border-box;
+    .btnIndietro ion-icon {
+    font-size: 0.8em;
+    min-width: 0.8em; /* Evita che l'icona si restringa */
 }
-
-/*TITOLO LIBRO*/
-.libro h3
-{
-    font-size: 1.6em;
-    margin-bottom: 10px;
-    font-family: "Patrick Hand", cursive;
-}
-
-/*DETTAGLI*/
-.libro p
-{
-    margin: 5px 0;
-    font-size: 15px;
-}
-
-/* POSIZIONE CARDS E FRECCE*/
-.attiva
-{
-    transform: translate(-50%, -50%) scale(1.2);
-    z-index: 3;
-    opacity: 1;
-}
-
-.cardSinistra
-{
-    transform: translate(-190%, -50%) scale(0.8);
-    opacity: 0.6;
-    z-index: 2;
-}
-
-.cardDestra
-{
-    transform: translate(90%, -50%) scale(0.8);
-    opacity: 0.6;
-    z-index: 2;
-}
-
-.nascosta
-{
-    opacity: 0;
-    z-index: 1;
-}
-
-/* FRECCE */
-
-.freccia
-{
-    background: transparent;
-    border: none;
-    color: white;
-
-    font-size: 3em;
-    cursor: pointer;
-
-    z-index: 10;
-
-    transition: 0.2s ease;
-}
-
-.freccia:hover
-{
-    transform: scale(1.2);
 }
