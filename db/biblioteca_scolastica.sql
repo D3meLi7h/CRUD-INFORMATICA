@@ -16,12 +16,10 @@ CREATE TABLE Utenti (
     Genere ENUM('M', 'F', 'Altro') NOT NULL,
     Data_Nascita DATE NOT NULL,
     Tipo_Utente ENUM('Studente', 'Docente', 'Altro') NOT NULL,
-    Cod_Fis CHAR(16) NOT NULL UNIQUE,
     Indirizzo VARCHAR(100) NOT NULL,
     Citta VARCHAR(50) NOT NULL,
     N_Telefono VARCHAR(20) NOT NULL,
     Email VARCHAR(100),
-    N_Carta_Identita VARCHAR(20) NOT NULL
 );
 
 CREATE TABLE Autori (
