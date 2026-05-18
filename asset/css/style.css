@@ -6,7 +6,7 @@ body
     font-family: tahoma, sans-serif;
     color: antiquewhite;
 
-    background: url('asset/img/libri.png');
+    background: url('/asset/img/libri.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
