@@ -14,7 +14,7 @@ btnChiudi.addEventListener('click', () =>
     riquadro.classList.remove('attivaPopup');
 });
 
-//cambia pagina
+//pagina home
 const inputNickname = document.querySelector('.input-box input');
 const btnEntra = document.querySelector('.btnEntra');
 
@@ -31,4 +31,12 @@ btnEntra.addEventListener('click', (event) =>
         localStorage.setItem("nickname", inputNickname.value);
         window.location.href = "/include/generi.html";
     }
+});
+
+//pagina registrazione
+const linkRegistra = document.querySelector('.linkRegistra');
+
+linkRegistra.addEventListener('click', (event) =>
+{
+    window.location.href = "/include/registra.html";
 });
