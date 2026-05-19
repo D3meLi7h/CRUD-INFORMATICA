@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <title>Libreria</title>
+        <link rel="stylesheet" href="/asset/css/registra.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    </head>
+
+<body>
+
+    <div class="riquadro">
+    <h1 class="titolo">Registrati</h1>
+
+    <!-- BOTTONE PAGINA PRECEDENTE -->
+    <button class="btnIndietro" id="indietro">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+    </button>
+
+<!-- Registrazione -->
+<form action="registra.php" method="POST">
+
+    <div class="input-box">
+        <input type="text" name="nome" required>
+        <label>Nome</label>
+    </div>
+
+    <div class="input-box">
+        <input type="text" name="cognome" required>
+        <label>Cognome</label>
+    </div>
+
+    <div class="input-box">
+        <input type="date" name="data_nascita" required>
+        <label>Data di Nascita</label>
+    </div>
+
+    <div class="input-box">
+        <select name="genere" required>
+            <option value="M">Maschio</option>
+            <option value="F">Femmina</option>
+            <option value="Altro">Altro</option>
+        </select>
+        <label>Genere</label>
+    </div>
+
+    <div class="input-box">
+        <select name="tipo_utente" required>
+            <option value="Studente">Studente</option>
+            <option value="Docente">Docente</option>
+            <option value="Altro">Altro</option>
+        </select>
+        <label>Tipo Utente</label>
+    </div>
+
+    <div class="input-box">
+        <input type="text" name="indirizzo" required>
+        <label>Indirizzo</label>
+    </div>
+
+    <div class="input-box">
+        <input type="text" name="citta" required>
+        <label>Città</label>
+    </div>
+
+    <div class="input-box">
+        <input type="text" name="telefono" required>
+        <label>Telefono</label>
+    </div>
+
+    <div class="input-box">
+        <input type="email" name="email">
+        <label>Email</label>
+    </div>
+
+    <button class="registra" type="submit">Registrati</button>
+
+</form>
+
+    </div>
+</body>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="/asset/js/registra.js"></script>
+
+</html>
