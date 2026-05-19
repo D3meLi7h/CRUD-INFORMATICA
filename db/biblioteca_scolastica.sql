@@ -19,7 +19,7 @@ CREATE TABLE Utenti (
     Indirizzo VARCHAR(100) NOT NULL,
     Citta VARCHAR(50) NOT NULL,
     N_Telefono VARCHAR(20) NOT NULL,
-    Email VARCHAR(100),
+    Email VARCHAR(100)
 );
 
 CREATE TABLE Autori (
