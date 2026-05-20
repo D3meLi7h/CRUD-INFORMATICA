@@ -1,43 +1,69 @@
-//LOGOUT
+
+// LOGOUT
+// Seleziona il bottone logout tramite ID
 const btnLogout = document.querySelector('#logout');
-btnLogout.addEventListener('click', () =>
-{
-    window.location.href = "/index.html";
+
+// Quando l’utente clicca sul bottone logout
+btnLogout.addEventListener('click', () => {
+    // Torna alla pagina di login
+    window.location.href = "../index.html";
 });
 
+
+
+// NICKNAME DA LOCALSTORAGE
+// Recupera il nickname salvato nel browser
 const nickname = localStorage.getItem("nickname");
+
+// Seleziona lo span dove mostrare il nickname
 const nomeSpan = document.querySelector('.nickname');
 
-if(nickname)
-{
+// Se esiste un nickname salvato
+if (nickname) {
+    // Inserisce il nickname nella pagina
     nomeSpan.textContent = nickname;
-};
+}
 
+
+
+// AUDIO
+// Prende l’elemento audio della pagina
 const audio = document.getElementById("audio");
+
+// Prende l’icona del volume
 const icon = document.getElementById("audioIcon");
+
+// Prende il bottone per controllare l’audio
 const btnAudio = document.getElementById("btnAudio");
 
+// Audio alternatp
 btnAudio.addEventListener("click", () => {
-    if (audio.paused)
-    {
+
+    if (audio.paused) {
         audio.play();
     }
-    
-    else
-    {
+
+    else {
         audio.pause();
     }
 
-    icon.setAttribute
-    (
+    // Icona alternata
+    icon.setAttribute(
         "name",
-        audio.paused ? "volume-mute-outline" : "volume-high-outline"
+        audio.paused 
+            ? "volume-mute-outline"
+            : "volume-high-outline"
     );
 });
 
-//INDIETRO
+
+
+// BOTTONE INDIETRO
+// Seleziona il bottone "indietro"
 const Indietro = document.getElementById("indietro");
-Indietro.addEventListener('click', () =>
-{
-    window.location.href = "/include/generi.html";
+
+// on click
+Indietro.addEventListener('click', () => {
+
+    window.location.href = "../include/generi.html";
 });
