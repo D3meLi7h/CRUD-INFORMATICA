@@ -6,7 +6,7 @@ body
     font-family: Tahoma, sans-serif;
     color: white;
 
-    background: url('/asset/img/giallo.jpg');
+    background: url('../img/giallo.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
