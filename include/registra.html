@@ -5,83 +5,117 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+
     </head>
 
 <body>
 
+    <!-- Contenitore principale della pagina -->
     <div class="riquadro">
-    <h1 class="titolo">Registrati</h1>
 
-    <!-- BOTTONE PAGINA PRECEDENTE -->
-    <button class="btnIndietro" id="indietro">
-        <ion-icon name="arrow-back-outline"></ion-icon>
-    </button>
+        <!-- Titolo -->
+        <h1 class="titolo">Registrati</h1>
 
-<!-- Registrazione -->
-<form action="registra.php" method="POST">
+        <!-- Bottone per tornare alla pagina precedente -->
+        <button class="btnIndietro" id="indietro">
 
-    <div class="input-box">
-        <input type="text" name="nome" required>
-        <label>Nome</label>
+            <!-- Icona freccia indietro -->
+            <ion-icon name="arrow-back-outline"></ion-icon>
+
+        </button>
+
+        <!-- FORM DI REGISTRAZIONE -->
+        <!-- I dati vengono inviati al file registra.php tramite metodo POST -->
+        <form action="registra.php" method="POST">
+
+            <!-- Campo Nome -->
+            <div class="input-box">
+                <input type="text" name="nome" required>
+                <label>Nome</label>
+            </div>
+
+            <!-- Campo Cognome -->
+            <div class="input-box">
+                <input type="text" name="cognome" required>
+                <label>Cognome</label>
+            </div>
+
+            <!-- Campo Data di nascita -->
+            <div class="input-box">
+                <input type="date" name="data_nascita" required>
+                <label>Data di Nascita</label>
+            </div>
+
+            <!-- Selezione genere -->
+            <div class="input-box">
+
+                <select name="genere" required>
+                    <option value="M">Maschio</option>
+                    <option value="F">Femmina</option>
+                    <option value="Altro">Altro</option>
+
+                </select>
+
+                <label>Genere</label>
+
+            </div>
+
+            <!-- Selezione tipo utente -->
+            <div class="input-box">
+
+                <select name="tipo_utente" required>
+
+                    <!-- Tipologie di utenti -->
+                    <option value="Studente">Studente</option>
+                    <option value="Docente">Docente</option>
+                    <option value="Altro">Altro</option>
+
+                </select>
+
+                <label>Tipo Utente</label>
+
+            </div>
+
+            <!-- Campo indirizzo -->
+            <div class="input-box">
+                <input type="text" name="indirizzo" required>
+                <label>Indirizzo</label>
+            </div>
+
+            <!-- Campo città -->
+            <div class="input-box">
+                <input type="text" name="citta" required>
+                <label>Città</label>
+            </div>
+
+            <!-- Campo telefono -->
+            <div class="input-box">
+                <input type="text" name="telefono" required>
+                <label>Telefono</label>
+            </div>
+
+            <!-- Campo email -->
+            <div class="input-box">
+                <input type="email" name="email">
+                <label>Email</label>
+            </div>
+
+            <!-- Bottone invio form -->
+            <button class="registra" type="submit">
+                Registrati
+            </button>
+
+        </form>
+
     </div>
 
-    <div class="input-box">
-        <input type="text" name="cognome" required>
-        <label>Cognome</label>
-    </div>
-
-    <div class="input-box">
-        <input type="date" name="data_nascita" required>
-        <label>Data di Nascita</label>
-    </div>
-
-    <div class="input-box">
-        <select name="genere" required>
-            <option value="M">Maschio</option>
-            <option value="F">Femmina</option>
-            <option value="Altro">Altro</option>
-        </select>
-        <label>Genere</label>
-    </div>
-
-    <div class="input-box">
-        <select name="tipo_utente" required>
-            <option value="Studente">Studente</option>
-            <option value="Docente">Docente</option>
-            <option value="Altro">Altro</option>
-        </select>
-        <label>Tipo Utente</label>
-    </div>
-
-    <div class="input-box">
-        <input type="text" name="indirizzo" required>
-        <label>Indirizzo</label>
-    </div>
-
-    <div class="input-box">
-        <input type="text" name="citta" required>
-        <label>Città</label>
-    </div>
-
-    <div class="input-box">
-        <input type="text" name="telefono" required>
-        <label>Telefono</label>
-    </div>
-
-    <div class="input-box">
-        <input type="email" name="email">
-        <label>Email</label>
-    </div>
-
-    <button class="registra" type="submit">Registrati</button>
-
-</form>
-
-    </div>
 </body>
-
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script type="module" 
+        src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js">
+    </script>
+    <script nomodule 
+        src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js">
+    </script>
     <script src="/asset/js/registra.js"></script>
 
 </html>
