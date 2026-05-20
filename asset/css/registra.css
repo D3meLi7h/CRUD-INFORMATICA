@@ -7,7 +7,7 @@ body {
     font-family: Tahoma, sans-serif;
     color: antiquewhite;
 
-    background: url('/asset/img/libri.png') center/cover no-repeat fixed;
+    background: url('../img/libri.png') center/cover no-repeat fixed;
 
     display: flex;
     justify-content: center;
