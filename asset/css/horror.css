@@ -6,7 +6,7 @@ body
     font-family: Tahoma, sans-serif;
     color: white;
 
-    background: url('/asset/img/horror.jpg');
+    background: url('../img/horror.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
