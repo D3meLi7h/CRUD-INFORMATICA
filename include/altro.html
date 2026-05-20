@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>Libreria</title>
+        <link rel="stylesheet" href="../asset/css/altro.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    </head>
+
+<body>
+
+    <!-- Contenitore principale della pagina -->
+    <div class="riquadro">
+
+        <!-- Titolo principale della sezione -->
+        <h1 class="titolo">Altro</h1>
+    
+        <!-- Bottone di logout -->
+        <button class="btnLogout" id="logout">
+            <!-- Icona Ionicons per logout -->
+            <ion-icon name="exit-outline"></ion-icon>
+
+            <!-- Inserimento nickname dell'utente nel bottone-->
+            <span class="nickname"></span>
+        </button>
+
+        <!-- Bottone per tornare alla pagina precedente -->
+        <button class="btnIndietro" id="indietro">
+            <!-- Icona freccia indietro -->
+            <ion-icon name="arrow-back-outline"></ion-icon>
+        </button>
+
+        <!-- Sottotitolo della pagina -->
+        <h2 class="sottotitolo">My School Library</h2>
+        
+        <!-- audio -->
+        <audio id="audio" src="../asset/audio/audio.mp3" autoplay loop></audio>
+
+        <!-- Bottone per controllare l'audio -->
+        <button class="btnAudio" id="btnAudio">
+            <!-- Icona volume (inizialmente audio attivo) -->
+            <ion-icon id="audioIcon" name="volume-high-outline"></ion-icon>
+        </button>
+
+    </div>
+</body>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="../asset/js/bottoniGeneri.js"></script>
+
+</html>
