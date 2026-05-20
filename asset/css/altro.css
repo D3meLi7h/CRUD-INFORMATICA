@@ -1,0 +1,207 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+/* BASE */
+body {
+    margin: 0;
+    font-family: Tahoma, sans-serif;
+    color: antiquewhite;
+
+    background: url('../img/libri.png') center/cover no-repeat fixed;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+/* RIQUADRO */
+.riquadro {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100vh;
+    padding: 40px;
+    border: 2px solid antiquewhite;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    gap: clamp(20px, 3vh, 40px);
+    box-sizing: border-box;
+}
+
+@media (max-width: 90em) 
+{
+    .riquadro
+    {
+        width: 70%;
+    }
+}
+
+/* TITOLI*/
+.titolo,
+.sottotitolo {
+    text-align: center;
+    font-family: "Patrick Hand", cursive;
+    text-shadow: 0 0 7px rgb(86, 45, 15);
+    margin-top: 0;
+}
+
+.titolo {
+    font-size: 4em;
+}
+
+.sottotitolo {
+    font-size: 3em;
+    margin-top: 20%;
+}
+
+@media (max-width: 90em)
+{
+    .titolo 
+    {
+        font-size: 3em;
+    }
+
+    .sottotitolo 
+    {
+        font-size: 2.4em;
+    }
+}
+
+button {
+    background: transparent;
+    color: antiquewhite;
+    cursor: pointer;
+}
+
+/* LOGOUT */
+.btnLogout {
+    position: fixed;
+    top: 5%;
+    right: 4%;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    width: 64px;
+    height: 60px;
+    padding: 10px;
+
+    border: 2px solid antiquewhite;
+    border-radius: 6px;
+
+    overflow: hidden;
+    transition: width 0.4s ease, box-shadow 0.3s;
+}
+
+.btnLogout ion-icon {
+    font-size: 2.4em;
+}
+
+.nickname {
+    font-size: 1.7em;
+    opacity: 0;
+    max-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: 0.3s ease;
+}
+
+.btnLogout:hover {
+    width: 200px;
+}
+
+.btnLogout:hover .nickname {
+    opacity: 1;
+    max-width: 120px;
+}
+
+
+@media (max-width: 90em) {
+
+    .btnLogout {
+        width: 50px;
+        height: 50px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btnLogout:hover {
+        width: 50px;
+        height: 50px;
+        box-shadow: 0 0 10px antiquewhite;
+    }
+
+    .btnLogout ion-icon {
+    font-size: 2em;
+    min-width: 2em; /* Evita che l'icona si restringa */
+}
+
+    .btnLogout:hover .nickname {
+        opacity: 0;
+        max-width: 0;
+    }
+}
+/* AUDIO */
+.btnAudio {
+    position: absolute;
+    bottom: 5%;
+    right: 3%;
+
+    font-size: clamp(24px, 3vw, 40px);
+
+    border: none;
+
+    transition: transform 0.2s ease;
+}
+
+.btnAudio:hover { transform: scale(0.9); }
+.btnAudio:active { transform: scale(0.8); }
+
+/*PAGINA PRECEDENTE*/
+.btnIndietro {
+    position: fixed;
+    top: 5%;
+    left: 4%;
+
+    width: 64px;
+    height: 60px;
+    padding: 14px;
+
+    display: flex;
+    align-items: center;
+
+    border: 2px solid antiquewhite;
+    border-radius: 6px;
+
+    font-size: 2em;
+
+    transition: 0.2s ease;
+}
+
+.btnIndietro:hover {
+    color: rgb(86, 45, 15);
+    background-color: antiquewhite;
+}
+
+@media (max-width: 90em) {
+
+    .btnIndietro {
+        width: 50px;
+        height: 50px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btnIndietro:hover {
+        width: 50px;
+        height: 50px;
+    }
+
+    .btnIndietro ion-icon {
+    font-size: 0.8em;
+    min-width: 0.8em; /* Evita che l'icona si restringa */
+}
+}
