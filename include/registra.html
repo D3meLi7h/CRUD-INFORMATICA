@@ -9,73 +9,88 @@
 
 <body>
 
+    <!-- Contenitore principale della pagina -->
     <div class="riquadro">
-    <h1 class="titolo">Registrati</h1>
 
-    <!-- BOTTONE PAGINA PRECEDENTE -->
-    <button class="btnIndietro" id="indietro">
-        <ion-icon name="arrow-back-outline"></ion-icon>
-    </button>
+        <!-- Titolo principale della sezione -->
+        <h1 class="titolo">Registrati</h1>
+        <!-- Bottone per tornare alla pagina precedente -->
+        <button class="btnIndietro" id="indietro">
+            <!-- Icona freccia indietro -->
+            <ion-icon name="arrow-back-outline"></ion-icon>
+        </button>
 
-<!-- Registrazione -->
-<form action="registra.php" method="POST">
+        <!-- FORM DI REGISTRAZIONE -->
+        <!-- PHP riceve i dati -->
+        <!-- POST: i dati vengono inviati in modo sicuro nel body della richiesta -->
+        <form action="registra.php" method="POST">
 
-    <div class="input-box">
-        <input type="text" name="nome" required>
-        <label>Nome</label>
-    </div>
+            <!-- Campo Nome -->
+            <div class="input-box">
+                <input type="text" name="nome" required>
+                <label>Nome</label>
+            </div>
 
-    <div class="input-box">
-        <input type="text" name="cognome" required>
-        <label>Cognome</label>
-    </div>
+            <!-- Campo Cognome -->
+            <div class="input-box">
+                <input type="text" name="cognome" required>
+                <label>Cognome</label>
+            </div>
 
-    <div class="input-box">
-        <input type="date" name="data_nascita" required>
-        <label>Data di Nascita</label>
-    </div>
+            <!-- Campo Data di nascita -->
+            <div class="input-box">
+                <input type="date" name="data_nascita" required>
+                <label>Data di Nascita</label>
+            </div>
 
-    <div class="input-box">
-        <select name="genere" required>
-            <option value="M">Maschio</option>
-            <option value="F">Femmina</option>
-            <option value="Altro">Altro</option>
-        </select>
-        <label>Genere</label>
-    </div>
+            <!-- Menu a tendina: Genere -->
+            <div class="input-box">
+                <select name="genere" required>
+                    <option value="M">Maschio</option>
+                    <option value="F">Femmina</option>
+                    <option value="Altro">Altro</option>
+                </select>
+                <label>Genere</label>
+            </div>
 
-    <div class="input-box">
-        <select name="tipo_utente" required>
-            <option value="Studente">Studente</option>
-            <option value="Docente">Docente</option>
-            <option value="Altro">Altro</option>
-        </select>
-        <label>Tipo Utente</label>
-    </div>
+            <!-- Menu a tendina: Tipo utente -->
+            <div class="input-box">
+                <select name="tipo_utente" required>
+                    <option value="Studente">Studente</option>
+                    <option value="Docente">Docente</option>
+                    <option value="Altro">Altro</option>
+                </select>
+                <label>Tipo Utente</label>
+            </div>
 
-    <div class="input-box">
-        <input type="text" name="indirizzo" required>
-        <label>Indirizzo</label>
-    </div>
+            <!-- Campo indirizzo -->
+            <div class="input-box">
+                <input type="text" name="indirizzo" required>
+                <label>Indirizzo</label>
+            </div>
 
-    <div class="input-box">
-        <input type="text" name="citta" required>
-        <label>Città</label>
-    </div>
+            <!-- Campo città -->
+            <div class="input-box">
+                <input type="text" name="citta" required>
+                <label>Città</label>
+            </div>
 
-    <div class="input-box">
-        <input type="text" name="telefono" required>
-        <label>Telefono</label>
-    </div>
+            <!-- Campo telefono -->
+            <div class="input-box">
+                <input type="text" name="telefono" required>
+                <label>Telefono</label>
+            </div>
 
-    <div class="input-box">
-        <input type="email" name="email">
-        <label>Email</label>
-    </div>
+            <!-- Campo email  -->
+            <div class="input-box">
+                <input type="email" name="email">
+                <label>Email</label>
+            </div>
 
-    <button class="registra" type="submit">Registrati</button>
+            <!-- Pulsante di invio -->
+            <button class="registra" type="submit">Registrati</button>
 
-</form>
+        </form>
 
     </div>
 </body>
