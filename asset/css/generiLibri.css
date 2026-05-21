@@ -2,7 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
 
 /* BASE */
-body {
+body
+{
     margin: 0;
     font-family: Tahoma, sans-serif;
     color: antiquewhite;
@@ -16,7 +17,8 @@ body {
 }
 
 /* RIQUADRO */
-.riquadro {
+.riquadro
+{
     display: flex;
     flex-direction: column;
     width: 50%;
@@ -40,43 +42,72 @@ body {
 
 /* TITOLI*/
 .titolo,
-.sottotitolo {
+.sottotitolo
+{
     text-align: center;
     font-family: "Patrick Hand", cursive;
     text-shadow: 0 0 7px rgb(86, 45, 15);
     margin-top: 0;
 }
 
-.titolo {
+/* GENERI */
+.titolo
+{
     font-size: 4em;
 }
 
-.sottotitolo {
-    font-size: 3em;
-    margin-top: 20%;
-}
-
-@media (max-width: 90em)
+/* My School Library */
+.sottotitolo
 {
-    .titolo 
-    {
-        font-size: 3em;
-    }
-
-    .sottotitolo 
-    {
-        font-size: 2.4em;
-    }
+    font-size: 3em;
+    margin-top: 5%;
 }
 
-button {
+button
+{
     background: transparent;
     color: antiquewhite;
     cursor: pointer;
 }
 
+/* bottoni generi */
+.btnGenere
+{
+    width: 100%;
+    height: 10%;
+
+    display: flex;
+    align-items: center;
+
+    border: none;
+    border-bottom: 2px solid antiquewhite;
+
+    font-size: 1.3em;
+    transition: 0.2s ease;
+}
+
+.btnGenere:hover
+{
+    font-size: 1.4em;
+}
+
+@media (max-width: 90em) 
+{
+    .btnGenere
+    {
+        font-size: 1.0em;
+
+    }
+
+    .btnGenere:hover
+    {
+        font-size: 1.1em;
+    }
+}
+
 /* LOGOUT */
-.btnLogout {
+.btnLogout
+{
     position: fixed;
     top: 5%;
     right: 4%;
@@ -96,11 +127,14 @@ button {
     transition: width 0.4s ease, box-shadow 0.3s;
 }
 
-.btnLogout ion-icon {
+.btnLogout ion-icon
+{
     font-size: 2.4em;
+    min-width: 40px; /* Evita che l'icona si restringa */
 }
 
-.nickname {
+.nickname
+{
     font-size: 1.7em;
     opacity: 0;
     max-width: 0;
@@ -109,99 +143,94 @@ button {
     transition: 0.3s ease;
 }
 
-.btnLogout:hover {
-    width: 200px;
-}
+.btnLogout:hover { width: 200px;}
 
-.btnLogout:hover .nickname {
+.btnLogout:hover .nickname
+{
     opacity: 1;
     max-width: 120px;
 }
 
 
-@media (max-width: 90em) {
+@media (max-width: 90em)
+{
 
-    .btnLogout {
+    .btnLogout
+    {
         width: 50px;
         height: 50px;
         align-items: center;
         justify-content: center;
     }
 
-    .btnLogout:hover {
+    .btnLogout:hover
+    {
         width: 50px;
         height: 50px;
         box-shadow: 0 0 10px antiquewhite;
     }
 
-    .btnLogout ion-icon {
-    font-size: 2em;
-    min-width: 2em; /* Evita che l'icona si restringa */
-}
+    .btnLogout ion-icon
+    {
+        font-size: 2em;
+        min-width: 2em; /* Evita che l'icona si restringa */
+    }
 
-    .btnLogout:hover .nickname {
+    .btnLogout:hover .nickname
+    {
         opacity: 0;
         max-width: 0;
     }
 }
-/* AUDIO */
-.btnAudio {
-    position: absolute;
-    bottom: 5%;
-    right: 3%;
 
-    font-size: clamp(24px, 3vw, 40px);
-
-    border: none;
-
-    transition: transform 0.2s ease;
-}
-
-.btnAudio:hover { transform: scale(0.9); }
-.btnAudio:active { transform: scale(0.8); }
-
-/*PAGINA PRECEDENTE*/
-.btnIndietro {
-    position: fixed;
-    top: 5%;
-    left: 4%;
-
-    width: 64px;
-    height: 60px;
-    padding: 14px;
+/*RICERCA*/
+.input-box
+{
+    position: relative;
+    width: 100%;
+    border-bottom: 2px solid antiquewhite;
+    box-sizing: border-box;
 
     display: flex;
     align-items: center;
-
-    border: 2px solid antiquewhite;
-    border-radius: 6px;
-
-    font-size: 2em;
-
-    transition: 0.2s ease;
+    gap: 10px;
 }
 
-.btnIndietro:hover {
-    color: rgb(86, 45, 15);
-    background-color: antiquewhite;
+/*testo di input*/
+.input-box input
+{ 
+    flex: 1;
+
+    background: transparent;
+    border: none;
+    outline: none;
+    color: antiquewhite;
+    font-size: 1.3em;
 }
 
-@media (max-width: 90em) {
+.input-box input::placeholder
+{
+    color: antiquewhite;
+    opacity: 0.7;
+}
 
-    .btnIndietro {
-        width: 50px;
-        height: 50px;
-        align-items: center;
-        justify-content: center;
+.btnCerca
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: transparent;
+    border: none;
+    color: antiquewhite;
+    cursor: pointer;
+}
+
+@media (max-width: 90em) 
+{
+    .input-box input
+    {
+        font-size: 1em;
+
     }
-
-    .btnIndietro:hover {
-        width: 50px;
-        height: 50px;
-    }
-
-    .btnIndietro ion-icon {
-    font-size: 0.8em;
-    min-width: 0.8em; /* Evita che l'icona si restringa */
-}
 }
