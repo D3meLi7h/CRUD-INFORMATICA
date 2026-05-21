@@ -15,3 +15,8 @@ Realizzare pagina di registrazione; //fatta (insert in tabella utenti)
 modificare pagina log-in (solo Nickaname + Password); //fatta (select in utenti)
 visualizzare libri; (select su libri + autori)
 creare pagina prestiti (insert in Prestiti)
+
+CAMBI:
+Avventura --> Storico;
+Fantasy --> Saggio;
+Rosa --> Manuale;
