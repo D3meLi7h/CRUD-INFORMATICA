@@ -17,6 +17,6 @@ visualizzare libri; (select su libri + autori)
 creare pagina prestiti (insert in Prestiti)
 
 CAMBI:
-Avventura --> Storico
-Fantasy --> Saggio
-Rosa --> Manuale
+Avventura --> Storico;
+Fantasy --> Saggio;
+Rosa --> Manuale;
