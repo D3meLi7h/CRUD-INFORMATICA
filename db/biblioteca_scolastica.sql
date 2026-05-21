@@ -12,7 +12,8 @@ CREATE TABLE Utenti (
     ID_Utente INT PRIMARY KEY AUTO_INCREMENT,
     Nome VARCHAR(50) NOT NULL,
     Cognome VARCHAR(50) NOT NULL,
-    Username VARCHAR(50) NOT NULL,
+    username VARCHAR(50) NOT NULL,
+    Pw VARCHAR(20) NOT NULL,
     Genere ENUM('M', 'F', 'Altro') NOT NULL,
     Data_Nascita DATE NOT NULL,
     Tipo_Utente ENUM('Studente', 'Docente', 'Altro') NOT NULL,
@@ -20,7 +21,6 @@ CREATE TABLE Utenti (
     Citta VARCHAR(50) NOT NULL,
     N_Telefono VARCHAR(20) NOT NULL,
     Email VARCHAR(100) UNIQUE,
-    Pw VARCHAR(20) NOT NULL,
 );
 
 -- ==========================================================
