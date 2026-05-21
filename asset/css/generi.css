@@ -1,0 +1,228 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+/* BASE */
+body {
+    margin: 0;
+    font-family: Tahoma, sans-serif;
+    color: antiquewhite;
+
+    background: url('../img/libri.png') center/cover no-repeat fixed;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+/* RIQUADRO */
+.riquadro {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100vh;
+    padding: 40px;
+    border: 2px solid antiquewhite;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    gap: clamp(20px, 3vh, 40px);
+    box-sizing: border-box;
+}
+
+@media (max-width: 90em) 
+{
+    .riquadro
+    {
+        width: 70%;
+    }
+}
+
+/* TITOLI*/
+.titolo,
+.sottotitolo {
+    text-align: center;
+    font-family: "Patrick Hand", cursive;
+    text-shadow: 0 0 7px rgb(86, 45, 15);
+    margin-top: 0;
+}
+
+/* GENERI */
+.titolo {
+    font-size: 4em;
+}
+
+/* My School Library */
+.sottotitolo {
+    font-size: 3em;
+    margin-top: 5%;
+}
+
+button {
+    background: transparent;
+    color: antiquewhite;
+    cursor: pointer;
+}
+
+/* bottoni generi */
+.btnGenere {
+    width: 100%;
+    height: 10%;
+
+    display: flex;
+    align-items: center;
+
+    border: none;
+    border-bottom: 2px solid antiquewhite;
+
+    font-size: 1.3em;
+    transition: 0.2s ease;
+}
+
+.btnGenere:hover {
+    font-size: 1.4em;
+}
+
+@media (max-width: 90em) 
+{
+.btnGenere {
+    font-size: 1.0em;
+
+}
+
+.btnGenere:hover {
+    font-size: 1.1em;
+}
+}
+
+/* LOGOUT */
+.btnLogout {
+    position: fixed;
+    top: 5%;
+    right: 4%;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    width: 64px;
+    height: 60px;
+    padding: 10px;
+
+    border: 2px solid antiquewhite;
+    border-radius: 6px;
+
+    overflow: hidden;
+    transition: width 0.4s ease, box-shadow 0.3s;
+}
+
+.btnLogout ion-icon {
+    font-size: 2.4em;
+    min-width: 40px; /* Evita che l'icona si restringa */
+}
+
+.nickname {
+    font-size: 1.7em;
+    opacity: 0;
+    max-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: 0.3s ease;
+}
+
+.btnLogout:hover { width: 200px;}
+
+.btnLogout:hover .nickname {
+    opacity: 1;
+    max-width: 120px;
+}
+
+
+@media (max-width: 90em) {
+
+    .btnLogout {
+        width: 50px;
+        height: 50px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btnLogout:hover {
+        width: 50px;
+        height: 50px;
+        box-shadow: 0 0 10px antiquewhite;
+    }
+
+    .btnLogout ion-icon {
+    font-size: 2em;
+    min-width: 2em; /* Evita che l'icona si restringa */
+}
+
+    .btnLogout:hover .nickname {
+        opacity: 0;
+        max-width: 0;
+    }
+}
+
+/* AUDIO */
+.btnAudio {
+    position: absolute;
+    bottom: 5%;
+    right: 3%;
+
+    font-size: clamp(24px, 3vw, 40px);
+
+    border: none;
+
+    transition: transform 0.2s ease;
+}
+
+.btnAudio:hover{ transform: scale(0.9); }
+.btnAudio:active { transform: scale(0.8); }
+
+/*"linea"*/
+.input-box {
+    position: relative;
+    width: 100%;
+    border-bottom: 2px solid antiquewhite;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/*testo di input*/
+.input-box input { 
+    flex: 1;
+
+    background: transparent;
+    border: none;
+    outline: none;
+    color: antiquewhite;
+    font-size: 1.3em;
+}
+
+.input-box input::placeholder {
+    color: antiquewhite;
+    opacity: 0.7;
+}
+
+.btnCerca {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: transparent;
+    border: none;
+    color: antiquewhite;
+    cursor: pointer;
+}
+
+@media (max-width: 90em) 
+{
+.input-box input {
+    font-size: 1em;
+
+}
+}
