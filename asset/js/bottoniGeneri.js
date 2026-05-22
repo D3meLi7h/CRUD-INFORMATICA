@@ -24,40 +24,6 @@ if (nickname) {
     nomeSpan.textContent = nickname;
 }
 
-
-
-// AUDIO
-// Prende l’elemento audio della pagina
-const audio = document.getElementById("audio");
-
-// Prende l’icona del volume
-const icon = document.getElementById("audioIcon");
-
-// Prende il bottone per controllare l’audio
-const btnAudio = document.getElementById("btnAudio");
-
-// Audio alternatp
-btnAudio.addEventListener("click", () => {
-
-    if (audio.paused) {
-        audio.play();
-    }
-
-    else {
-        audio.pause();
-    }
-
-    // Icona alternata
-    icon.setAttribute(
-        "name",
-        audio.paused 
-            ? "volume-mute-outline"
-            : "volume-high-outline"
-    );
-});
-
-
-
 // BOTTONE INDIETRO
 // Seleziona il bottone "indietro"
 const Indietro = document.getElementById("indietro");
