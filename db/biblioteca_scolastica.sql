@@ -132,7 +132,7 @@ INSERT INTO Autori (Nome, Cognome, Nazionalita, Data_Nascita) VALUES
 ('Umberto', 'Eco', 'Italiana', '1932-01-05');
 
 -- ==========================================================
--- LIBRI (INCLUSI 3 STORICI)
+-- LIBRI
 -- ==========================================================
 INSERT INTO Libri
 (Posizione, Copie_disponibili, Titolo, Descrizione, Anno_Pubblicazione, Numero_Pagine, Lingua_Originale, ISBN, Cod_Categoria)
@@ -147,9 +147,7 @@ VALUES
 -- Saggio
 ('C3', 1, 'Lezioni Americane', 'Saggio letterario', 1988, 150, 'Italiano', 'ISBN003', 3),
 
--- ==========================================================
--- LIBRI STORICI (NUOVI 3)
--- ==========================================================
+-- Storico
 
 ('D1', 2, 'I Promessi Sposi', 'Romanzo storico ambientato nel 1600', 1827, 720, 'Italiano', 'ISBN004', 4),
 
@@ -173,8 +171,7 @@ INSERT INTO Libri_Autori VALUES
 -- ==========================================================
 INSERT INTO Prestiti (ID_Utente, ID_Libro, Data_Restituzione) VALUES
 (1, 1, '2024-03-20'),
-(1, 2, NULL),
-(3, 2, NULL);
+(1, 2, NULL);
 
 -- ==========================================================
 -- RECENSIONI
