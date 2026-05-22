@@ -1,6 +1,6 @@
 <?php
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
+ini_set('display_errors', 1); // mostra gli errori a schermo
+error_reporting(E_ALL);       // mostra tutti gli errori
 
 // CONNESSIONE AL DATABASE
 $host     = "localhost";
@@ -8,13 +8,10 @@ $user     = "root";
 $password = "";
 $database = "Biblioteca_DB";
 
+// connessione al database
 $conn = new mysqli($host, $user, $password, $database);
 
-if ($conn->connect_error) {
-    die("Connessione fallita: " . $conn->connect_error);
-}
-
-// PRENDO I DATI DAL FORM
+// PRENDE I DATI DAL FORM (POST) trim per eliminare spazi
 $nome         = trim($_POST['nome']);
 $cognome      = trim($_POST['cognome']);
 $data_nascita = $_POST['data_nascita'];
@@ -27,9 +24,10 @@ $email        = trim($_POST['email']);
 $nickname     = trim($_POST['nickname']);
 $pw_raw       = $_POST['password'];
 
-// HASH SICURO DELLA PASSWORD
+// HASH DELLA PASSWORD (più sicura)
 $pw_hash = password_hash($pw_raw, PASSWORD_DEFAULT);
-// PREPARO LA QUERY SQL
+
+// PREPARO LA QUERY SQL (per evitare SQL injection)
 $stmt = $conn->prepare("
     INSERT INTO Utenti
         (Nome, Cognome, Genere, Data_Nascita, Tipo_Utente,
@@ -38,8 +36,9 @@ $stmt = $conn->prepare("
         (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
 ");
 
+// collegamento dei valori ai segnaposto ?
 $stmt->bind_param(
-    "sssssssssss", //s=string
+    "sssssssssss", // tutte stringhe
     $nome,
     $cognome,
     $genere,
@@ -53,14 +52,17 @@ $stmt->bind_param(
     $pw_hash
 );
 
-// ESECUZIONE
+// ESECUZIONE QUERY
 if ($stmt->execute()) {
+    // se va tutto bene torna alla home
     header("Location: ../index.html");
     exit;
 } else {
+    // se c'è un errore lo stampa
     echo "Errore: " . $stmt->error;
 }
 
+// chiusura statement e connessione
 $stmt->close();
 $conn->close();
 ?>
