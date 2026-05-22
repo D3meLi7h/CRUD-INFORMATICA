@@ -177,6 +177,4 @@ INSERT INTO Prestiti (ID_Utente, ID_Libro, Data_Restituzione) VALUES
 -- RECENSIONI
 -- ==========================================================
 INSERT INTO Recensioni (ID_Utente, ID_Libro, Voto, Testo_Recensione) VALUES
-(1, 1, 5, 'Bellissimo!'),
-(2, 1, 4, 'Molto interessante'),
-(3, 2, 5, 'Capolavoro');
+(1, 1, 5, 'Bellissimo!');
