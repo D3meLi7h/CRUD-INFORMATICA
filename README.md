@@ -22,3 +22,5 @@ Fantasy --> Saggio;
 Rosa --> Manuale;
 
 SQL è corretto, Username è diventato Nickname. Ho finito la pagina di registrazione e ora carico tutto. L'unico problema è che quando clicclo "registrati" mi fa Not Found ma carica comunque i dati nel db. 
+
++ Ho metto la mia cartella php in asset
