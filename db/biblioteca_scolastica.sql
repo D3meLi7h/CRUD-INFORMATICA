@@ -20,7 +20,7 @@ CREATE TABLE Utenti (
     N_Telefono VARCHAR(20) NOT NULL,
     Email VARCHAR(100) UNIQUE,
     Pw VARCHAR(20) NOT NULL,
-    Nickname VARCHAR(50) NOT NULL,
+    Nickname VARCHAR(50) NOT NULL
 );
 
 -- ==========================================================
