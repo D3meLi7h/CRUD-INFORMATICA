@@ -131,13 +131,10 @@ INSERT INTO Libri
 (Posizione, Copie_disponibili, Titolo, Descrizione, Anno_Pubblicazione, Numero_Pagine, Lingua_Originale, ISBN, Cod_Categoria)
 VALUES
 
--- Narrativa
 ('A1', 3, 'Il Barone Rampante', 'Classico italiano', 1957, 250, 'Italiano', 'ISBN001', 1),
 
--- Fantascienza
 ('B2', 5, '1984', 'Distopia politica', 1949, 328, 'Inglese', 'ISBN002', 2),
 
--- Saggio
 ('C3', 1, 'Lezioni Americane', 'Saggio letterario', 1988, 150, 'Italiano', 'ISBN003', 3),
 
 ('D1', 2, 'I Promessi Sposi', 'Romanzo storico ambientato nel 1600', 1827, 720, 'Italiano', 'ISBN004', 4),
