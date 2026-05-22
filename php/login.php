@@ -1,3 +1,4 @@
+<?php
 <!DOCTYPE html>
 <html lang="it">
 
@@ -21,3 +22,4 @@
 </body>
 
 </html>
+?>
