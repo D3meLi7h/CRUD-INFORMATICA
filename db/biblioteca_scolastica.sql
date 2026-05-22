@@ -20,7 +20,7 @@ CREATE TABLE Utenti (
     Indirizzo VARCHAR(100) NOT NULL,
     Citta VARCHAR(50) NOT NULL,
     N_Telefono VARCHAR(20) NOT NULL,
-    Email VARCHAR(100) UNIQUE,
+    Email VARCHAR(100) UNIQUE
 );
 
 -- ==========================================================
@@ -125,7 +125,7 @@ INSERT INTO Autori (Nome, Cognome, Nazionalita, Data_Nascita) VALUES
 ('Umberto', 'Eco', 'Italiana', '1932-01-05');
 
 -- ==========================================================
--- LIBRI (INCLUSI 3 STORICI)
+-- LIBRI
 -- ==========================================================
 INSERT INTO Libri
 (Posizione, Copie_disponibili, Titolo, Descrizione, Anno_Pubblicazione, Numero_Pagine, Lingua_Originale, ISBN, Cod_Categoria)
@@ -141,7 +141,7 @@ VALUES
 ('C3', 1, 'Lezioni Americane', 'Saggio letterario', 1988, 150, 'Italiano', 'ISBN003', 3),
 
 -- ==========================================================
--- 📌 LIBRI STORICI (NUOVI 3)
+-- LIBRI STORICI
 -- ==========================================================
 
 ('D1', 2, 'I Promessi Sposi', 'Romanzo storico ambientato nel 1600', 1827, 720, 'Italiano', 'ISBN004', 4),
