@@ -28,22 +28,22 @@
         <!-- FORM DI REGISTRAZIONE -->
         <!-- PHP riceve i dati -->
         <!-- POST: i dati vengono inviati in modo sicuro nel body della richiesta -->
-        <form action="registra.php" method="POST">
+        <form action="../asset/php/registra.php" method="POST">
 
             <!-- Campo Nome -->
-            <div class="input-box">
+            <div class="input-box" required>
                 <input type="text" name="nome" required>
                 <label>Nome</label>
             </div>
 
             <!-- Campo Cognome -->
-            <div class="input-box">
+            <div class="input-box" required>
                 <input type="text" name="cognome" required>
                 <label>Cognome</label>
             </div>
 
             <!-- Campo Data di nascita -->
-            <div class="input-box">
+            <div class="input-box" required>
                 <input type="date" name="data_nascita" required>
                 <label>Data di Nascita</label>
             </div>
@@ -88,12 +88,24 @@
 
             <!-- Campo email  -->
             <div class="input-box">
-                <input type="email" name="email">
+                <input type="email" name="email" required>
                 <label>Email</label>
             </div>
 
+            <!-- Campo nickname  -->
+            <div class="input-box">
+                <input type="text" name="nickname" required>
+                <label>Nickname</label>
+            </div>
+
+            <!-- Campo password  -->
+            <div class="input-box">
+                <input type="text" name="password" required>
+                <label>Password</label>
+            </div>
+
             <!-- Pulsante di invio -->
-            <button class="registra" type="submit">Registrati</button>
+            <button class="registra" id="registra" type="submit">Registrati</button>
 
         </form>
 
