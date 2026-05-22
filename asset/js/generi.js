@@ -13,29 +13,6 @@ if(nickname)
     nomeSpan.textContent = nickname;
 };
 
-//AUDIO
-const audio = document.getElementById("audio");
-const icon = document.getElementById("audioIcon");
-const btnAudio = document.getElementById("btnAudio");
-
-btnAudio.addEventListener("click", () => {
-    if (audio.paused)
-    {
-        audio.play();
-    }
-    
-    else
-    {
-        audio.pause();
-    }
-
-    icon.setAttribute
-    (
-        "name",
-        audio.paused ? "volume-mute-outline" : "volume-high-outline"
-    );
-});
-
 //BOTTONI GENERI
 const generi = [
     "storico",
