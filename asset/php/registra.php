@@ -22,10 +22,7 @@ $citta        = trim($_POST['citta']);
 $telefono     = trim($_POST['telefono']);
 $email        = trim($_POST['email']);
 $nickname     = trim($_POST['nickname']);
-$pw_raw       = $_POST['password'];
-
-// hash della password
-$pw_hash = password_hash($pw_raw, PASSWORD_DEFAULT);
+$pw       = trim($_POST['password']);
 
 // query sql
 $stmt = $conn->prepare("
@@ -49,7 +46,7 @@ $stmt->bind_param(
     $telefono,
     $email,
     $nickname,
-    $pw_hash
+    $pw
 );
 
 // ESECUZIONE QUERY
