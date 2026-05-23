@@ -17,10 +17,10 @@ CREATE TABLE Utenti (
     Tipo_Utente ENUM('Studente', 'Docente', 'Altro') NOT NULL,
     Indirizzo VARCHAR(100) NOT NULL,
     Citta VARCHAR(50) NOT NULL,
-    N_Telefono VARCHAR(20) NOT NULL,
+    N_Telefono VARCHAR(20) NOT NULL UNIQUE,
     Email VARCHAR(100) UNIQUE,
-    Pw VARCHAR(50) NOT NULL,
-    Nickname VARCHAR(50) NOT NULL
+    Pw VARCHAR(50) NOT NULL UNIQUE,
+    Nickname VARCHAR(50) NOT NULL UNIQUE
 );
 
 -- ==========================================================
