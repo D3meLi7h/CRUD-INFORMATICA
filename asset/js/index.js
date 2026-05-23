@@ -20,7 +20,7 @@ const inputPassword = document.querySelector('#password');
 const btnEntra = document.querySelector('.btnEntra');
 
 // login
-btnEntra.addEventListener('click', (event) =>
+btnEntra.addEventListener('click', async (event) =>
 {
     event.preventDefault();
 
@@ -41,11 +41,39 @@ btnEntra.addEventListener('click', (event) =>
         return;
     }
 
-    // salvataggio nickname
-    localStorage.setItem("nickname", nickname);
+    // chiamata al server
+    try
+    {
+        const risposta = await fetch('login.php',
+        {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ nickname, password })
+        });
 
-    // redirect
-    window.location.href = "include/generi.html";
+        if (!risposta.ok)
+        {
+            alert('Errore server: ' + risposta.status);
+            return;
+        }
+
+        const dati = await risposta.json();
+
+        if (dati.successo === true)
+        {
+            localStorage.setItem('nickname', dati.nickname);
+            window.location.href = 'include/generi.html';
+        }
+        else
+        {
+            alert(dati.messaggio);
+        }
+    }
+    catch (err)
+    {
+        console.error('Errore:', err);
+        alert('Impossibile contattare il server. Sei su localhost?');
+    }
 });
 
 // registrazione
