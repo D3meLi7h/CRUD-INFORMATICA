@@ -26,3 +26,4 @@ SQL è corretto, Username è diventato Nickname. Ho finito la pagina di registra
 + Ho metto la mia cartella php in asset
 
 O matti, ho fatto il login. Nuovi file: login.php, db.php, index.js, index.html.
+Ho pure eliminato la barra di ricerca
