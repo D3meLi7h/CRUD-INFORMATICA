@@ -2,7 +2,7 @@
 ini_set('display_errors', 1); // mostra gli errori a schermo
 error_reporting(E_ALL);       // mostra tutti gli errori
 
-// CONNESSIONE AL DATABASE
+// connessione al db
 $host     = "localhost";
 $user     = "root";
 $password = "";
@@ -11,8 +11,8 @@ $database = "Biblioteca_DB";
 // connessione al database
 $conn = new mysqli($host, $user, $password, $database);
 
-// PRENDE I DATI DAL FORM (POST) trim per eliminare spazi
-$nome         = trim($_POST['nome']);
+// prendere dati dal form con post
+$nome         = trim($_POST['nome']); // trim per eliminare spazi
 $cognome      = trim($_POST['cognome']);
 $data_nascita = $_POST['data_nascita'];
 $genere       = $_POST['genere'];
@@ -24,10 +24,10 @@ $email        = trim($_POST['email']);
 $nickname     = trim($_POST['nickname']);
 $pw_raw       = $_POST['password'];
 
-// HASH DELLA PASSWORD (più sicura)
+// hash della password
 $pw_hash = password_hash($pw_raw, PASSWORD_DEFAULT);
 
-// PREPARO LA QUERY SQL (per evitare SQL injection)
+// query sql
 $stmt = $conn->prepare("
     INSERT INTO Utenti
         (Nome, Cognome, Genere, Data_Nascita, Tipo_Utente,
