@@ -194,7 +194,7 @@ button {
 /* PAGINA PRESTITO */
 
 /* CONTENITORE DATA + RICERCA */
-.dataRestituzione,
+.dataRestituzione, .dataPrestito,
 .cerca {
     display: flex;
     flex-direction: column;
@@ -203,7 +203,7 @@ button {
 }
 
 /* LABEL */
-.dataRestituzione label,
+.dataRestituzione label, .dataPrestito label,
 .cerca label {
     font-size: 1.2em;
     text-shadow: 0 0 5px rgb(86, 45, 15);
@@ -214,7 +214,7 @@ button {
 }
 
 /* INPUT DATA */
-.dataRestituzione input {
+.dataRestituzione input,.dataPrestito input {
     background: rgba(255, 239, 213, 0.08);
     border: 1.5px solid antiquewhite;
     border-radius: 6px;
@@ -223,12 +223,6 @@ button {
     padding: 10px 14px;
     outline: none;
     transition: border-color 0.2s, box-shadow 0.2s;
-}
-
-/* FOCUS DATA */
-.dataRestituzione input:focus {
-    border-color: rgb(255, 220, 170);
-    box-shadow: 0 0 8px rgba(255, 220, 170, 0.35);
 }
 
 /* BOX INPUT RICERCA */
