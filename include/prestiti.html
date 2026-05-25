@@ -31,20 +31,29 @@
         </button>
 
         <!-- PRESTITI -->
+
+        <!--ricerca-->
         <div class="cerca" id="cerca">
-            <label>Cerca libro</label>
-            <ion-icon name="search-outline"></ion-icon>
+            <label><ion-icon name="search-outline"></ion-icon>Cerca libro</label>
             <div class="input-box">
                 <input type="text" placeholder="Cerca titolo o autore... ">
             </div>
         </div>
 
+        <!--selezione libro-->
         <div class="selezione" id="selezione">
             <span class="libro" id="libro"></span>
         </div>
 
-        <div class="dataRestituzione">
-            <label>Data restituzione (opzionale)</label>
+        <!--data di prestito-->
+        <div class="dataPrestito" id="dataPrestito">
+            <label><ion-icon name="calendar-outline"></ion-icon>Data prestito</label>
+            <input type="date" id="dataPrestito">
+        </div>
+
+        <!--data restituzione-->
+        <div class="dataRestituzione" id="dataRestituzione">
+            <label><ion-icon name="calendar-outline"></ion-icon>Data restituzione (opzionale)</label>
             <input type="date" id="dataRestituzione">
         </div>
 

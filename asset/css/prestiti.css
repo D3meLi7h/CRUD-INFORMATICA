@@ -193,28 +193,28 @@ button {
 
 /* PAGINA PRESTITO */
 
-.form-prestito {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 100%;
-}
-
-.dataRestituzione {
+/* CONTENITORE DATA + RICERCA */
+.dataRestituzione, .dataPrestito,
+.cerca {
     display: flex;
     flex-direction: column;
     gap: 8px;
     position: relative;
 }
 
-.dataRestituzione label
-{
+/* LABEL */
+.dataRestituzione label, .dataPrestito label,
+.cerca label {
     font-size: 1.2em;
     text-shadow: 0 0 5px rgb(86, 45, 15);
+    color: antiquewhite;
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
-.dataRestituzione input {
+/* INPUT DATA */
+.dataRestituzione input,.dataPrestito input {
     background: rgba(255, 239, 213, 0.08);
     border: 1.5px solid antiquewhite;
     border-radius: 6px;
@@ -225,52 +225,45 @@ button {
     transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-.dataRestituzione input::placeholder {
-    color: rgba(250, 235, 215, 0.45);
-}
-
-.dataRestituzione input:focus {
-    border-color: rgb(255, 220, 170);
-    box-shadow: 0 0 8px rgba(255, 220, 170, 0.35);
-}
-
-/*RICERCA LIBRO*/
-.cerca
-{
+/* BOX INPUT RICERCA */
+.input-box {
     background: rgba(255, 239, 213, 0.08);
     border: 1.5px solid antiquewhite;
     border-radius: 6px;
-    color: antiquewhite;
-    font-size: 1em;
     padding: 10px 14px;
-    outline: none;
     transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-.input-box input { 
-    flex: 1;
-
+/* INPUT RICERCA */
+.input-box input {
+    width: 100%;
     background: transparent;
     border: none;
     outline: none;
     color: antiquewhite;
-    font-size: 1.3em;
+    font-size: 1em;
 }
 
+/* PLACEHOLDER */
 .input-box input::placeholder {
     color: antiquewhite;
     opacity: 0.7;
 }
 
-@media (max-width: 90em) 
-{
-    .input-box input
-    {
-        font-size: 1em;
+/* FOCUS RICERCA */
+.input-box:focus-within {
+    border-color: rgb(255, 220, 170);
+    box-shadow: 0 0 8px rgba(255, 220, 170, 0.35);
+}
 
+/* RESPONSIVE */
+@media (max-width: 90em) {
+    .input-box input {
+        font-size: 1em;
     }
 }
 
+/* LISTA RISULTATI */
 .lista-risultati {
     list-style: none;
     margin: 0;
@@ -297,11 +290,14 @@ button {
     border-radius: 6px;
     font-size: 1.3em;
     letter-spacing: 0.04em;
-    transition: background 0.25s, color 0.25s, box-shadow 0.25s;
+    transition: 0.3s ease;
+    background: transparent;
+    color: antiquewhite;
+    cursor: pointer;
 }
 
+/* HOVER BOTTONE */
 .btnConferma:hover {
     background: antiquewhite;
     color: rgb(86, 45, 15);
-    box-shadow: 0 0 14px rgba(255, 220, 170, 0.4);
 }

@@ -3,7 +3,7 @@
     header('Content-Type: application/json');
 
     // Include il file di connessione al database
-    include "asset/php/db.php";
+    include "php/db.php";
 
     // Legge i dati inviati dal client in formato JSON
     $data = json_decode(file_get_contents("php://input"), true);

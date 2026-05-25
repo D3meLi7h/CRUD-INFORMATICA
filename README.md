@@ -10,10 +10,10 @@
   SQL MODIFICHE:
   aggiungere password in Utenti; //fatto
   Togliere CF, carta identità da Utenti; //fatto
-  Realizzare pagina di registrazione; //fatta (insert in tabella utenti)
-  modificare pagina log-in (solo Nickaname + Password); //fatta (select in utenti)
+  Realizzare pagina di registrazione; (insert in tabella utenti) //fatta
+  modificare pagina log-in (solo Nickaname + Password); (select in utenti) //fatta
   visualizzare libri; (select su libri + autori)
-  creare pagina prestiti (insert in Prestiti)
+  creare pagina prestiti (insert in Prestiti) //fatto
 
   CAMBI:
   Avventura --> Storico;
@@ -25,3 +25,5 @@
 -O Matti, ho fatto il login. Nuovi file: login.php, db.php, index.js, index.html. Ho pure eliminato la barra di ricerca modificando generi.html e generi.css. -V
 
 -Ho creato la pagina per la creazione dei libri. Nuovi: crea.html, crea.css, crea.js. -V
+
+-Ho concluso la pagina dei prestiti (prestiti.html, .css, .js). -V
