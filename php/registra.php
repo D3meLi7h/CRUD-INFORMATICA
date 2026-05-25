@@ -80,7 +80,7 @@ $stmt->bind_param(
 
 // ESECUZIONE
 if ($stmt->execute()) {
-    header("Location: ../../index.html");
+    header("Location: ../index.html");
     exit;
 } else {
     echo "Errore: " . $stmt->error;
