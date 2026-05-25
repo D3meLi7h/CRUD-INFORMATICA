@@ -190,3 +190,118 @@ button {
     min-width: 0.8em; /* Evita che l'icona si restringa */
 }
 }
+
+/* PAGINA PRESTITO */
+
+.form-prestito {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.dataRestituzione {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: relative;
+}
+
+.dataRestituzione label
+{
+    font-size: 1.2em;
+    text-shadow: 0 0 5px rgb(86, 45, 15);
+}
+
+.dataRestituzione input {
+    background: rgba(255, 239, 213, 0.08);
+    border: 1.5px solid antiquewhite;
+    border-radius: 6px;
+    color: antiquewhite;
+    font-size: 1em;
+    padding: 10px 14px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.dataRestituzione input::placeholder {
+    color: rgba(250, 235, 215, 0.45);
+}
+
+.dataRestituzione input:focus {
+    border-color: rgb(255, 220, 170);
+    box-shadow: 0 0 8px rgba(255, 220, 170, 0.35);
+}
+
+/*RICERCA LIBRO*/
+.cerca
+{
+    background: rgba(255, 239, 213, 0.08);
+    border: 1.5px solid antiquewhite;
+    border-radius: 6px;
+    color: antiquewhite;
+    font-size: 1em;
+    padding: 10px 14px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input-box input { 
+    flex: 1;
+
+    background: transparent;
+    border: none;
+    outline: none;
+    color: antiquewhite;
+    font-size: 1.3em;
+}
+
+.input-box input::placeholder {
+    color: antiquewhite;
+    opacity: 0.7;
+}
+
+@media (max-width: 90em) 
+{
+    .input-box input
+    {
+        font-size: 1em;
+
+    }
+}
+
+.lista-risultati {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: rgba(40, 25, 10, 0.92);
+    border: 1.5px solid antiquewhite;
+    border-radius: 6px;
+    max-height: 180px;
+    overflow-y: auto;
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: none;
+}
+
+/* BOTTONE CONFERMA */
+.btnConferma {
+    align-self: center;
+    margin-top: 10px;
+    padding: 12px 40px;
+    border: 2px solid antiquewhite;
+    border-radius: 6px;
+    font-size: 1.3em;
+    letter-spacing: 0.04em;
+    transition: background 0.25s, color 0.25s, box-shadow 0.25s;
+}
+
+.btnConferma:hover {
+    background: antiquewhite;
+    color: rgb(86, 45, 15);
+    box-shadow: 0 0 14px rgba(255, 220, 170, 0.4);
+}

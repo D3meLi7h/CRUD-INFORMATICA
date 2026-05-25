@@ -72,7 +72,7 @@ btnEntra.addEventListener('click', async (event) =>
     catch (err)
     {
         console.error('Errore:', err);
-        alert('Impossibile contattare il server. Sei su localhost?');
+        alert('Impossibile contattare il server. Hai attivato Apache e MySQL?');
     }
 });
 

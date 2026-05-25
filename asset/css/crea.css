@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
 
 /* BASE */
@@ -21,7 +20,6 @@ body {
     flex-direction: column;
 
     width: 50%;
-
     min-height: 100vh;
 
     padding: 40px;
@@ -40,49 +38,27 @@ body {
     overflow-x: hidden;
 }
 
-@media (max-width: 90em) 
-{
-    .riquadro
-    {
+@media (max-width: 90em) {
+    .riquadro {
         width: 70%;
     }
 }
 
-/*LOGO*/
-.logo
-{
-    position: fixed;
-    top: -1%;
-    right: -1%;
-    width: 180px;
-    height: 180px;
-    user-select: none;
-}
-
-@media (max-width: 90em)
-{
-    .logo 
-    {
-        width: 140px;
-        height: 140px;
-    }
-}
-
-/* TITOLO*/
-.titolo{
+/* TITOLO */
+.titolo,
+.sottotitolo {
     text-align: center;
     font-family: "Patrick Hand", cursive;
     text-shadow: 0 0 7px rgb(86, 45, 15);
     margin-top: 0;
-    font-size: 4em;
 }
 
-@media (max-width: 90em)
-{
-    .titolo 
-    {
-        font-size: 3em;
-    }
+.titolo      { font-size: 4em; }
+.sottotitolo { font-size: 3em; }
+
+@media (max-width: 90em) {
+    .titolo      { font-size: 3em; }
+    .sottotitolo { font-size: 2.4em; }
 }
 
 button {
@@ -91,7 +67,7 @@ button {
     cursor: pointer;
 }
 
-/*PAGINA PRECEDENTE*/
+/* PAGINA PRECEDENTE */
 .btnIndietro {
     position: fixed;
     top: 5%;
@@ -103,6 +79,7 @@ button {
 
     display: flex;
     align-items: center;
+    justify-content: center;
 
     border: 2px solid antiquewhite;
     border-radius: 6px;
@@ -118,68 +95,70 @@ button {
 }
 
 @media (max-width: 90em) {
-
     .btnIndietro {
-        width: 50px;
-        height: 50px;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .btnIndietro:hover {
         width: 50px;
         height: 50px;
     }
 
     .btnIndietro ion-icon {
-    font-size: 0.8em;
-    min-width: 0.8em; /* Evita che l'icona si restringa */
-}
+        font-size: 0.8em;
+        min-width: 0.8em;
+    }
 }
 
+/* INPUT BOX */
 .input-box {
     position: relative;
     width: 100%;
-    margin-bottom: 18px;
     display: flex;
     flex-direction: column;
+    margin-bottom: 18px;
 }
 
-/*TITOLI BOTTONI*/
+/* LABEL */
 .input-box label {
+    transform: translateY(-50%);
     font-size: 1.4em;
-    transform: translateY(-270%);
     font-weight: 500;
     pointer-events: none;
-    transition: 0.3s
 }
 
-/*INPUT + SELECT*/
+/* INPUT, SELECT, TEXTAREA */
 .input-box input,
-.input-box select {
+.input-box select,
+.input-box textarea {
     width: 100%;
-    padding: 10px;
     background: transparent;
     border: none;
     border-bottom: 2px solid antiquewhite;
+
     outline: none;
     color: antiquewhite;
     font-size: 1em;
-    justify-self: center;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+
+    padding: 6px 0;
+    box-sizing: border-box;
+    resize: vertical; /* solo textarea ne beneficia */
 }
 
-/*opzioni*/
+/* Placeholder */
+.input-box input::placeholder,
+.input-box textarea::placeholder {
+    color: rgba(250, 235, 215, 0.5);
+}
+
+/* Opzioni select */
 .input-box select option {
     background-color: antiquewhite;
     color: rgb(86, 45, 15);
-    transition: 0.2s;
 }
 
-/*bottone registrazione*/
-.registra {
+/* INVIO */
+.invio {
     margin-top: auto;
 
-    width: 100%;
+    width: 54px;
     height: 50px;
 
     display: flex;
@@ -192,14 +171,13 @@ button {
     border: 2px solid antiquewhite;
     border-radius: 6px;
 
-    font-size: 1.2em;
+    font-size: 2em;
 
     transition: 0.2s ease;
     cursor: pointer;
 }
 
-.registra:hover
-{
+.invio:hover {
     color: rgb(86, 45, 15);
     background-color: antiquewhite;
 }

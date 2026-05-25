@@ -29,6 +29,17 @@ body
     font-family: "Patrick Hand", cursive;
 }
 
+.logo
+{
+    position: fixed;
+    top: -3%;
+    left: -3%;
+    width: 120px;
+    height: 120px;
+    user-select: none;
+}
+
+
 .btnLogin
 {
     position: fixed;
