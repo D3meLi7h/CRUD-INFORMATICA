@@ -13,7 +13,7 @@
     <div class="riquadro">
 
         <!-- Titolo principale della sezione -->
-        <h1 class="titolo">Giallo</h1>
+        <h1 class="titolo">Storico</h1>
     
         <!-- Bottone di logout -->
         <button class="btnLogout" id="logout">
@@ -41,3 +41,15 @@
     <script src="../asset/js/bottoniGeneri.js"></script>
 
 </html>
+<?php
+$sql = "SELECT * FROM libri join categorie ON libri.Cod_Categoria = categorie.Cod_Categoria WHERE Genere_Libro = 'storico'";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    while($row = $result->fetch_assoc()) {
+        echo "Titolo: " . $row["titolo"]. " - Autore: " . $row["autore"]. "<br>";
+    }
+} else {
+    echo "0 risultati";
+}
+?>

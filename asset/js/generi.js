@@ -30,7 +30,7 @@ generi.forEach(genere => {
 
     if (btn) {
         btn.addEventListener("click", () => {
-            window.location.href = `../include/${genere}.html`;
+            window.location.href = `../include/${genere}.php`;
         });
     }
 });
