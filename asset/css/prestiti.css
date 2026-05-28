@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+/*  BASE  */
+body {
+    margin: 0;
+    font-family: Tahoma, sans-serif;
+    color: antiquewhite;
+
+    /* sfondo */
+    background: url('../img/libri.png') center/cover no-repeat fixed;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/*  RIQUADRO  */
+.riquadro {
+    display: flex;
+    flex-direction: column;
+
+    width: 50%;
+    height: 100vh;
+
+    padding: 40px;
+    border: 2px solid antiquewhite;
+
+    /* effetto vetro */
+    backdrop-filter: blur(15px);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+
+    gap: clamp(20px, 3vh, 40px);
+    box-sizing: border-box;
+}
+
+/* responsive contenitore */
+@media (max-width: 90em) {
+    .riquadro {
+        width: 70%;
+    }
+}
+
+/*  TITOLI  */
+.titolo,
+.sottotitolo {
+    text-align: center;
+    font-family: "Patrick Hand", cursive;
+    text-shadow: 0 0 7px rgb(86, 45, 15);
+    margin-top: 0;
+}
+
+.titolo {
+    font-size: 4em;
+}
+
+.sottotitolo {
+    font-size: 3em;
+    margin-top: 20%;
+}
+
+/* responsive titoli */
+@media (max-width: 90em) {
+    .titolo {
+        font-size: 3em;
+    }
+
+    .sottotitolo {
+        font-size: 2.4em;
+    }
+}
+
+/*  BOTTONI GENERALI  */
+button {
+    background: transparent;
+    color: antiquewhite;
+    cursor: pointer;
+}
+
+/*  BOTTONE LOGOUT  */
+.btnLogout {
+    position: fixed;
+    top: 5%;
+    right: 4%;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    width: 64px;
+    height: 60px;
+    padding: 10px;
+
+    border: 2px solid antiquewhite;
+    border-radius: 6px;
+
+    overflow: hidden;
+    transition: width 0.4s ease, box-shadow 0.3s;
+}
+
+/* icona logout */
+.btnLogout ion-icon {
+    font-size: 2.4em;
+}
+
+/* nome utente nascosto */
+.nickname {
+    font-size: 1.7em;
+    opacity: 0;
+    max-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: 0.3s ease;
+}
+
+/* effetto hover logout */
+.btnLogout:hover {
+    width: 200px;
+}
+
+.btnLogout:hover .nickname {
+    opacity: 1;
+    max-width: 120px;
+}
+
+/* responsive logout */
+@media (max-width: 90em) {
+
+    .btnLogout {
+        width: 50px;
+        height: 50px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btnLogout:hover {
+        width: 50px;
+        height: 50px;
+        box-shadow: 0 0 10px antiquewhite;
+    }
+
+    .btnLogout ion-icon {
+        font-size: 2em;
+        min-width: 2em;
+    }
+
+    .btnLogout:hover .nickname {
+        opacity: 0;
+        max-width: 0;
+    }
+}
+
+/*  BOTTONE INDIETRO  */
+.btnIndietro {
+    position: fixed;
+    top: 5%;
+    left: 4%;
+
+    width: 64px;
+    height: 60px;
+    padding: 14px;
+
+    display: flex;
+    align-items: center;
+
+    border: 2px solid antiquewhite;
+    border-radius: 6px;
+
+    font-size: 2em;
+    transition: 0.2s ease;
+}
+
+/* hover bottone indietro */
+.btnIndietro:hover {
+    color: rgb(86, 45, 15);
+    background-color: antiquewhite;
+}
+
+/* responsive indietro */
+@media (max-width: 90em) {
+
+    .btnIndietro {
+        width: 50px;
+        height: 50px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btnIndietro ion-icon {
+        font-size: 0.8em;
+        min-width: 0.8em;
+    }
+}
+
+/*  PAGINA PRESTITO  */
+
+/* blocchi input (data e ricerca) */
+.dataRestituzione,
+.dataPrestito,
+.cerca {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: relative;
+}
+
+/* label dei campi */
+.dataRestituzione label,
+.dataPrestito label,
+.cerca label {
+    font-size: 1.2em;
+    text-shadow: 0 0 5px rgb(86, 45, 15);
+    color: antiquewhite;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* input data */
+.dataRestituzione input,
+.dataPrestito input {
+    background: rgba(255, 239, 213, 0.08);
+    border: 1.5px solid antiquewhite;
+    border-radius: 6px;
+    color: antiquewhite;
+    font-size: 1em;
+    padding: 10px 14px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* contenitore input ricerca */
+.input-box {
+    background: rgba(255, 239, 213, 0.08);
+    border: 1.5px solid antiquewhite;
+    border-radius: 6px;
+    padding: 10px 14px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* input ricerca */
+.input-box input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: antiquewhite;
+    font-size: 1em;
+}
+
+/* placeholder */
+.input-box input::placeholder {
+    color: antiquewhite;
+    opacity: 0.7;
+}
+
+/* effetto focus ricerca */
+.input-box:focus-within {
+    border-color: rgb(255, 220, 170);
+    box-shadow: 0 0 8px rgba(255, 220, 170, 0.35);
+}
+
+/* responsive input */
+@media (max-width: 90em) {
+    .input-box input {
+        font-size: 1em;
+    }
+}
+
+/* lista risultati ricerca */
+.lista-risultati {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    background: rgba(40, 25, 10, 0.92);
+    border: 1.5px solid antiquewhite;
+    border-radius: 6px;
+
+    max-height: 180px;
+    overflow-y: auto;
+
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    right: 0;
+
+    z-index: 100;
+    display: none;
+}
+
+/* bottone conferma */
+.btnConferma {
+    align-self: center;
+    margin-top: 10px;
+
+    padding: 12px 40px;
+    border: 2px solid antiquewhite;
+    border-radius: 6px;
+
+    font-size: 1.3em;
+    letter-spacing: 0.04em;
+
+    transition: 0.3s ease;
+    background: transparent;
+    color: antiquewhite;
+}
+
+/* hover conferma */
+.btnConferma:hover {
+    background: antiquewhite;
+    color: rgb(86, 45, 15);
+}

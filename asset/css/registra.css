@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+/*  BASE PAGINA  */
+body {
+    margin: 0;
+    font-family: Tahoma, sans-serif;
+    color: antiquewhite;
+
+    /* sfondo immagine */
+    background: url('../img/libri.png') center/cover no-repeat fixed;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/*  CONTENITORE PRINCIPALE  */
+.riquadro {
+    display: flex;
+    flex-direction: column;
+
+    width: 50%;
+
+    padding: 40px;
+    border: 2px solid antiquewhite;
+
+    /* effetto vetro */
+    backdrop-filter: blur(15px);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+
+    gap: clamp(20px, 3vh, 40px);
+
+    box-sizing: border-box;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* responsive contenitore */
+@media (max-width: 90em) {
+    .riquadro {
+        width: 70%;
+    }
+}
+
+/*  LOGO  */
+.logo {
+    position: fixed;
+    top: -1%;
+    right: -1%;
+
+    width: 180px;
+    height: 180px;
+
+    user-select: none; /* non selezionabile */
+}
+
+/* logo responsive */
+@media (max-width: 90em) {
+    .logo {
+        width: 140px;
+        height: 140px;
+    }
+}
+
+/*  TITOLO  */
+.titolo {
+    text-align: center;
+    font-family: "Patrick Hand", cursive;
+    text-shadow: 0 0 7px rgb(86, 45, 15);
+    margin-top: 0;
+    font-size: 4em;
+}
+
+/* titolo responsive */
+@media (max-width: 90em) {
+    .titolo {
+        font-size: 3em;
+    }
+}
+
+/*  BOTTONI GENERALI  */
+button {
+    background: transparent;
+    color: antiquewhite;
+    cursor: pointer;
+}
+
+/*  BOTTONE INDIETRO  */
+.btnIndietro {
+    position: fixed;
+    top: 5%;
+    left: 4%;
+
+    width: 64px;
+    height: 60px;
+    padding: 14px;
+
+    display: flex;
+    align-items: center;
+
+    border: 2px solid antiquewhite;
+    border-radius: 6px;
+
+    font-size: 2em;
+
+    transition: 0.2s ease;
+}
+
+/* hover bottone indietro */
+.btnIndietro:hover {
+    color: rgb(86, 45, 15);
+    background-color: antiquewhite;
+}
+
+/* responsive bottone indietro */
+@media (max-width: 90em) {
+
+    .btnIndietro {
+        width: 50px;
+        height: 50px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btnIndietro ion-icon {
+        font-size: 0.8em;
+        min-width: 0.8em;
+    }
+}
+
+/*  INPUT FORM  */
+.input-box {
+    position: relative;
+    width: 100%;
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* label dei campi */
+.input-box label {
+    font-size: 1.4em;
+
+    /* posizione sopra input */
+    transform: translateY(-270%);
+
+    font-weight: 500;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+/* input e select */
+.input-box input,
+.input-box select {
+    width: 100%;
+    padding: 10px;
+
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid antiquewhite;
+
+    outline: none;
+    color: antiquewhite;
+    font-size: 1em;
+}
+
+/* opzioni del select */
+.input-box select option {
+    background-color: antiquewhite;
+    color: rgb(86, 45, 15);
+}
+
+/*  BOTTONE REGISTRA  */
+.registra {
+    margin-top: auto;
+
+    width: 100%;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: none;
+    color: antiquewhite;
+
+    border: 2px solid antiquewhite;
+    border-radius: 6px;
+
+    font-size: 1.2em;
+
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+/* hover bottone registra */
+.registra:hover {
+    color: rgb(86, 45, 15);
+    background-color: antiquewhite;
+}

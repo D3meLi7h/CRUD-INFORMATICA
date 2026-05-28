@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+
+    <!-- Codifica dei caratteri -->
+    <meta charset="UTF-8">
+
+    <!-- Titolo della pagina -->
+    <title>Libreria - Aggiungi Autore</title>
+
+    <!-- Adatta la pagina ai dispositivi mobili -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Collegamento al file CSS -->
+    <link rel="stylesheet" href="../asset/css/crea.css">
+
+    <!-- Collegamenti ai font Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Import del font -->
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Contenitore principale -->
+    <div class="riquadro">
+
+        <!-- Titolo della pagina -->
+        <h1 class="titolo">Aggiungi autore</h1>
+
+        <!-- Bottone per tornare indietro -->
+        <button type="button" class="btnIndietro" id="indietro">
+            <ion-icon name="arrow-back-outline"></ion-icon>
+        </button>
+
+        <!-- Form per aggiungere un autore -->
+        <form action="../php/elabora_autore.php" method="POST" id="form-autore">
+
+            <!-- Campo nome -->
+            <div class="input-box">
+
+                <label for="nome">Nome*</label>
+
+                <input 
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    maxlength="50"
+                    required
+                >
+
+            </div>
+
+            <!-- Campo cognome -->
+            <div class="input-box">
+
+                <label for="cognome">Cognome*</label>
+
+                <input 
+                    type="text"
+                    id="cognome"
+                    name="cognome"
+                    maxlength="50"
+                    required
+                >
+
+            </div>
+
+            <!-- Campo nazionalità -->
+            <div class="input-box">
+
+                <label for="nazionalita">Nazionalità</label>
+
+                <input 
+                    type="text"
+                    id="nazionalita"
+                    name="nazionalita"
+                    maxlength="50"
+                    placeholder="es. Italiana"
+                >
+
+            </div>
+
+            <!-- Campo data di nascita -->
+            <div class="input-box">
+
+                <label for="data_nascita">Data di nascita</label>
+
+                <input 
+                    type="date"
+                    id="data_nascita"
+                    name="data_nascita"
+                >
+
+            </div>
+
+            <!-- Bottone invio del form -->
+            <button type="submit" class="invio" id="invio">
+
+                <ion-icon name="checkmark-outline"></ion-icon>
+
+            </button>
+
+        </form>
+
+    </div>
+
+    <!-- Script per le icone -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- File JavaScript della pagina -->
+    <script src="../asset/js/crea.js"></script>
+
+</body>
+</html>

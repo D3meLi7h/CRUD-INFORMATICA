@@ -1,0 +1,411 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+body {
+    margin: 0;
+    font-family: Tahoma, sans-serif;
+    color: antiquewhite;
+    background: url('../img/libri.png') center/cover no-repeat fixed;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.riquadro {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    min-height: 100vh;
+    padding: 40px;
+    border: 2px solid antiquewhite;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    gap: clamp(20px, 3vh, 40px);
+    box-sizing: border-box;
+}
+
+@media (max-width: 90em) {
+    .riquadro {
+        width: 70%;
+    }
+}
+
+.contenuto-libro {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding-top: 10px;
+}
+
+.contenuto-libro h3 {
+    font-size: 1.8em;
+    margin: 0;
+    text-align: center;
+}
+
+.contenuto-libro p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+.contenuto-libro ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 14px;
+}
+
+.contenuto-libro li {
+    padding: 18px 20px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.08);
+    transition: 0.3s ease;
+}
+
+.contenuto-libro li:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 248, 220, 0.7);
+    box-shadow: 0 0 12px rgba(255, 248, 220, 0.7);
+}
+
+.contenuto-libro strong {
+    display: block;
+    font-size: 1.15em;
+    margin-bottom: 6px;
+}
+
+.titolo,
+.sottotitolo {
+    text-align: center;
+    font-family: "Patrick Hand", cursive;
+    text-shadow: 0 0 7px rgb(86, 45, 15);
+    margin-top: 0;
+}
+
+.titolo {
+    font-size: 4em;
+}
+
+.sottotitolo {
+    font-size: 3em;
+    margin-top: 20%;
+}
+
+@media (max-width: 90em) {
+    .titolo {
+        font-size: 3em;
+    }
+
+    .sottotitolo {
+        font-size: 2.4em;
+    }
+}
+
+button {
+    background: transparent;
+    color: antiquewhite;
+    cursor: pointer;
+}
+
+.btnLogout {
+    position: fixed;
+    top: 5%;
+    right: 4%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 64px;
+    height: 60px;
+    padding: 10px;
+    border: 2px solid antiquewhite;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: width 0.4s ease, box-shadow 0.3s;
+}
+
+.btnLogout ion-icon {
+    font-size: 2.4em;
+}
+
+.nickname {
+    font-size: 1.7em;
+    opacity: 0;
+    max-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: 0.3s ease;
+}
+
+.btnLogout:hover {
+    width: 200px;
+}
+
+.btnLogout:hover .nickname {
+    opacity: 1;
+    max-width: 120px;
+}
+
+@media (max-width: 90em) {
+    .btnLogout {
+        width: 50px;
+        height: 50px;
+        justify-content: center;
+    }
+
+    .btnLogout:hover {
+        width: 50px;
+        height: 50px;
+        box-shadow: 0 0 10px antiquewhite;
+    }
+
+    .btnLogout ion-icon {
+        font-size: 2em;
+        min-width: 2em;
+    }
+
+    .btnLogout:hover .nickname {
+        opacity: 0;
+        max-width: 0;
+    }
+}
+
+.btnIndietro {
+    position: fixed;
+    top: 5%;
+    left: 4%;
+    width: 64px;
+    height: 60px;
+    padding: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid antiquewhite;
+    border-radius: 6px;
+    font-size: 2em;
+    transition: 0.2s ease;
+}
+
+.btnIndietro:hover {
+    color: rgb(86, 45, 15);
+    background-color: antiquewhite;
+}
+
+@media (max-width: 90em) {
+    .btnIndietro {
+        width: 50px;
+        height: 50px;
+    }
+
+    .btnIndietro ion-icon {
+        font-size: 0.8em;
+        min-width: 0.8em;
+    }
+}
+
+.card-libro .titolo-libro {
+    display: block;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: antiquewhite;
+}
+
+.card-libro .autore-libro {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.9em;
+    color: rgba(255, 239, 213, 0.7);
+    margin-bottom: 8px;
+}
+
+.card-libro .anno-libro {
+    font-size: 0.85em;
+    color: rgba(255, 239, 213, 0.5);
+}
+
+.badge-copie {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 8px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.8em;
+    font-weight: bold;
+    border: 1px solid rgba(150, 210, 150, 0.5);
+    background: rgba(150, 210, 150, 0.15);
+    color: rgba(180, 230, 180, 0.9);
+}
+
+.badge-copie.esaurito {
+    border-color: rgba(220, 130, 130, 0.5);
+    background: rgba(220, 130, 130, 0.15);
+    color: rgba(240, 170, 170, 0.9);
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    gap: 25px;
+
+    width: clamp(450px, 30vw, 550px);
+    height: clamp(450px, 30vw, 550px);
+
+    background: transparent;
+    border: 2px solid antiquewhite;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform .5s ease;
+}
+
+.popup.aperto {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.popup h2 {
+    position: absolute;
+    top: 5%;
+    font-size: clamp(28px, 2.2vw, 40px);
+    text-shadow: 0 0 7px rgb(121, 98, 67);
+    margin: 0;
+}
+
+.det-autore,
+.det-descrizione {
+    font-size: 0.9em;
+    text-align: center;
+    color: rgba(255, 239, 213, 0.8);
+}
+
+.det-descrizione {
+    line-height: 1.5;
+}
+
+.griglia-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    font-size: 0.85em;
+    text-align: center;
+}
+
+.griglia-info span {
+    display: block;
+    font-size: 0.75em;
+    color: rgba(255, 239, 213, 0.55);
+}
+
+.griglia-info .cella {
+    color: antiquewhite;
+}
+
+.voto-stelle {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+}
+
+.stella-piena { color: rgb(245, 195, 80); }
+.stella-vuota { color: rgba(255, 239, 213, 0.3); }
+
+.num-recensioni {
+    font-size: 0.8em;
+    color: rgba(255, 239, 213, 0.55);
+}
+
+.btnChiudi {
+    position: absolute;
+    top: 0;
+    right: -1px;
+
+    width: 45px;
+    height: 45px;
+
+    background-color: antiquewhite;
+    color: rgb(221, 182, 130);
+
+    border: none;
+    border-bottom-left-radius: 20px;
+
+    font-size: 2em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+    z-index: 1;
+    line-height: 1;
+}
+
+/*INGRANAGGIO*/
+.btnImp
+{
+    position: absolute;
+    background: transparent;
+    border: none;
+    color:antiquewhite;
+    align-self:self-end;
+    top: 4%;
+    left: 4%;
+    font-size: 1.5em;
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+/* AGGIUNGI */
+.btnAggiungi
+{
+    position: fixed;
+    top: 12%;
+    right: 4%;
+
+    color: antiquewhite;
+    border: none;
+    cursor: pointer;
+
+    padding: 14px;
+    font-size: 2em;
+
+    background: none;
+
+    transition: 0.2s ease;
+}
+
+.btnAggiungi:hover
+{
+    transform: scale(0.8);
+}
+
+/*ELIMINAZIONE*/
+.btnDelete
+{
+    position: absolute;
+    background: transparent;
+    border: none;
+    color:antiquewhite;
+    align-self:self-end;
+    bottom: 4%;
+    left: 4%;
+    font-size: 1.5em;
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
